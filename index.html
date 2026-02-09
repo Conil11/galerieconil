@@ -13,11 +13,29 @@
       background: #F5F5F3;
       color: #0B0B0B;
       font-family: "Inter", sans-serif;
+      text-align: center;
+    }
+
+    nav {
       display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0B0B0B;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
     }
 
     h1 {
@@ -32,7 +50,7 @@
       margin-bottom: 30px;
     }
 
-    a {
+    .button {
       text-decoration: none;
       border: 1px solid #0B0B0B;
       padding: 12px 24px;
@@ -41,7 +59,7 @@
       transition: 0.3s;
     }
 
-    a:hover {
+    .button:hover {
       background: #0B0B0B;
       color: #F5F5F3;
     }
@@ -49,10 +67,19 @@
 </head>
 
 <body>
-  <div>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="hero">
     <h1>Galerie Conil</h1>
     <p>Art contemporain à Tanger</p>
-    <a href="artistes.html">Entrer dans la galerie</a>
+    <a class="button" href="artistes.html">Entrer dans la galerie</a>
   </div>
+
 </body>
 </html>
