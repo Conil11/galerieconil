@@ -1,72 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Galerie Conil</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      background: #F5F5F3;
-      color: #0B0B0B;
+      background: #0B0B0B;
+      color: #F5F5F3;
       font-family: "Inter", sans-serif;
-      text-align: center;
     }
 
+    /* NAV */
     nav {
       display: flex;
       justify-content: center;
       gap: 40px;
       padding: 25px 0;
       font-size: 14px;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid #222;
     }
 
     nav a {
       text-decoration: none;
-      color: #0B0B0B;
+      color: #F5F5F3;
+      opacity: 0.8;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
     .hero {
-      height: 80vh;
+      height: 85vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      padding: 20px;
     }
 
     h1 {
       font-family: "Playfair Display", serif;
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 52px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
     }
 
-    p {
-      color: #8A8A8A;
-      font-size: 16px;
-      margin-bottom: 30px;
+    .subtitle {
+      color: #BDBDBD;
+      margin-bottom: 35px;
+      font-size: 18px;
     }
 
     .button {
+      border: 1px solid #F5F5F3;
+      padding: 14px 32px;
       text-decoration: none;
-      border: 1px solid #0B0B0B;
-      padding: 12px 24px;
-      font-size: 14px;
-      color: #0B0B0B;
+      color: #F5F5F3;
       transition: 0.3s;
     }
 
     .button:hover {
-      background: #0B0B0B;
+      background: #F5F5F3;
+      color: #0B0B0B;
+    }
+
+    /* LANGUAGES */
+    .langs {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    .langs a {
       color: #F5F5F3;
+      text-decoration: none;
+      margin-left: 10px;
     }
   </style>
 </head>
 
 <body>
+
+  <div class="langs">
+    <a href="#">FR</a> | 
+    <a href="#">EN</a> | 
+    <a href="#">ES</a>
+  </div>
 
   <nav>
     <a href="index.html">Accueil</a>
@@ -75,11 +106,14 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="hero">
+  <section class="hero">
     <h1>Galerie Conil</h1>
-    <p>Art contemporain à Tanger</p>
-    <a class="button" href="artistes.html">Entrer dans la galerie</a>
-  </div>
+    <div class="subtitle">Art contemporain à Tanger</div>
+
+    <a class="button" href="galerie.html">
+      Entrer dans la galerie
+    </a>
+  </section>
 
 </body>
 </html>
