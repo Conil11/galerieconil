@@ -54,10 +54,35 @@
       margin-bottom: 20px;
     }
 
+    .lang-switch {
+      margin-bottom: 30px;
+    }
+
+    .lang-switch button {
+      background: none;
+      border: 1px solid #444;
+      color: #F5F5F3;
+      padding: 8px 14px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lang-switch button:hover,
+    .lang-switch button.active {
+      background: #F5F5F3;
+      color: #0B0B0B;
+    }
+
     .bio {
       color: #C2C2C2;
       line-height: 1.7;
       font-size: 15px;
+      display: none;
+    }
+
+    .bio.active {
+      display: block;
     }
   </style>
 </head>
@@ -71,23 +96,41 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Imagen principal del artista -->
-  <img class="hero" src="https://via.placeholder.com/1600x900" alt="Marine Bourgeois">
+  <img class="hero" src="marine.jpg" alt="Marine Bourgeois">
 
   <div class="container">
     <h1>Marine Bourgeois</h1>
 
-    <div class="bio">
-      <strong>FR</strong><br>
-      Marine Bourgeois développe une pratique de l’encre de Chine où le geste et le rythme explorent la présence matérielle et l’essence du trait. Son travail invite à une contemplation silencieuse.<br><br>
+    <!-- Selector de idioma -->
+    <div class="lang-switch">
+      <button class="active" onclick="showLang('fr', this)">FR</button>
+      <button onclick="showLang('en', this)">EN</button>
+      <button onclick="showLang('es', this)">ES</button>
+    </div>
 
-      <strong>EN</strong><br>
-      Marine Bourgeois develops a practice in Chinese ink where gesture and rhythm explore material presence and the essence of line. Her work invites silent contemplation.<br><br>
+    <!-- Textos -->
+    <div id="fr" class="bio active">
+      Marine Bourgeois développe une pratique de l’encre de Chine où le geste et le rythme explorent la présence matérielle et l’essence du trait. Son travail invite à une contemplation silencieuse.
+    </div>
 
-      <strong>ES</strong><br>
+    <div id="en" class="bio">
+      Marine Bourgeois develops a practice in Chinese ink where gesture and rhythm explore material presence and the essence of line. Her work invites silent contemplation.
+    </div>
+
+    <div id="es" class="bio">
       Marine Bourgeois desarrolla una práctica con tinta china donde el gesto y el ritmo exploran la presencia material y la esencia de la línea. Su obra invita a la contemplación silenciosa.
     </div>
   </div>
+
+  <script>
+    function showLang(lang, btn) {
+      document.querySelectorAll('.bio').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+
+      document.getElementById(lang).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
