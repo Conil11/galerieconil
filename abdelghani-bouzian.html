@@ -8,18 +8,86 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
-    body { margin:0; background:#0B0B0B; color:#F5F5F3; font-family:"Inter",sans-serif; }
-    nav { display:flex; justify-content:center; gap:40px; padding:25px 0; border-bottom:1px solid #222; font-size:14px; }
-    nav a { text-decoration:none; color:#F5F5F3; opacity:.8; transition:.3s; }
-    nav a:hover { opacity:1; }
-    .hero { width:100%; height:70vh; object-fit:cover; }
-    .container { max-width:800px; margin:auto; padding:40px 20px 80px; text-align:center; }
-    h1 { font-family:"Playfair Display",serif; font-size:42px; margin-bottom:20px; }
-    .bio { color:#C2C2C2; line-height:1.7; font-size:15px; }
+    body {
+      margin: 0;
+      background: #0B0B0B;
+      color: #F5F5F3;
+      font-family: "Inter", sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px 0;
+      border-bottom: 1px solid #222;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #F5F5F3;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px 80px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .lang-buttons {
+      margin-bottom: 30px;
+    }
+
+    .lang-buttons button {
+      background: transparent;
+      border: 1px solid #555;
+      color: #F5F5F3;
+      padding: 6px 14px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lang-buttons button:hover {
+      background: #F5F5F3;
+      color: #0B0B0B;
+    }
+
+    .bio {
+      display: none;
+      color: #C2C2C2;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .bio.active {
+      display: block;
+    }
   </style>
 </head>
 
 <body>
+
   <nav>
     <a href="index.html">Accueil</a>
     <a href="artistes.html">Artistes</a>
@@ -27,20 +95,48 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Imagen del artista (luego pondremos la real) -->
   <img class="hero" src="https://via.placeholder.com/1600x900" alt="Abdelghani Bouzian">
 
   <div class="container">
     <h1>Abdelghani Bouzian</h1>
-    <div class="bio">
-      <strong>FR</strong><br>
-      Abdelghani Bouzian développe une recherche picturale où matière, geste et mémoire dialoguent dans un espace sensible.<br><br>
 
-      <strong>EN</strong><br>
-      Abdelghani Bouzian explores a pictorial language where matter, gesture, and memory interact within a sensitive space.<br><br>
+    <!-- Botones de idioma -->
+    <div class="lang-buttons">
+      <button onclick="showLang('fr')">FR</button>
+      <button onclick="showLang('en')">EN</button>
+      <button onclick="showLang('es')">ES</button>
+    </div>
 
-      <strong>ES</strong><br>
-      Abdelghani Bouzian desarrolla un lenguaje pictórico donde materia, gesto y memoria dialogan en un espacio sensible.
+    <!-- Biografías -->
+    <div id="fr" class="bio active">
+      Abdelghani Bouzian développe une œuvre picturale marquée par la mémoire,
+      la matière et la lumière. Son langage artistique explore les liens entre
+      tradition et expression contemporaine, invitant à une lecture sensible
+      du temps et de l’espace.
+    </div>
+
+    <div id="en" class="bio">
+      Abdelghani Bouzian develops a pictorial work shaped by memory,
+      material and light. His artistic language explores the relationship
+      between tradition and contemporary expression, inviting a sensitive
+      reading of time and space.
+    </div>
+
+    <div id="es" class="bio">
+      Abdelghani Bouzian desarrolla una obra pictórica marcada por la memoria,
+      la materia y la luz. Su lenguaje artístico explora la relación entre
+      tradición y expresión contemporánea, invitando a una lectura sensible
+      del tiempo y el espacio.
     </div>
   </div>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.bio').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+  </script>
+
 </body>
 </html>
