@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Galerie Conil</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      background: #F5F5F3;
+      background: #0B0B0B;
+      color: #F5F5F3;
       font-family: "Inter", sans-serif;
-      color: #0B0B0B;
+      text-align: center;
     }
 
     nav {
@@ -20,53 +21,59 @@
       justify-content: center;
       gap: 40px;
       padding: 25px 0;
+      border-bottom: 1px solid #222;
       font-size: 14px;
-      border-bottom: 1px solid #e5e5e5;
     }
 
     nav a {
       text-decoration: none;
-      color: #0B0B0B;
+      color: #F5F5F3;
+      opacity: 0.8;
     }
 
-    h1 {
-      text-align: center;
-      font-family: "Playfair Display", serif;
-      margin: 60px 0 20px;
-      font-size: 36px;
+    nav a:hover {
+      opacity: 1;
     }
 
     .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 0 20px 80px;
-      text-align: center;
+      padding: 80px 20px;
     }
 
-    p {
-      color: #6f6f6f;
-      line-height: 1.6;
-      margin-bottom: 30px;
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      margin-bottom: 40px;
     }
 
-    .info {
-      margin: 20px 0;
-      font-size: 15px;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 26px;
-      border: 1px solid #0B0B0B;
+      padding: 14px 28px;
+      border: 1px solid #F5F5F3;
+      color: #F5F5F3;
       text-decoration: none;
-      color: #0B0B0B;
+      font-size: 16px;
       transition: 0.3s;
     }
 
-    .button:hover {
-      background: #0B0B0B;
-      color: #F5F5F3;
+    .btn:hover {
+      background: #F5F5F3;
+      color: #0B0B0B;
+    }
+
+    .whatsapp {
+      border demonstrate: 1px solid #25D366;
+      color: #25D366;
+    }
+
+    .email {
+      border: 1px solid #F5F5F3;
     }
   </style>
 </head>
@@ -80,21 +87,22 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>Contact</h1>
-
   <div class="container">
-    <p>
-      Pour toute demande d’information, acquisition d’œuvre ou visite privée,
-      nous vous invitons à nous contacter directement.
-    </p>
+    <h1>Contact</h1>
 
-    <div class="info"><strong>Médina de Tanger, Maroc</strong></div>
-    <div class="info">contact@galerieconil.com</div>
-    <div class="info">WhatsApp : +212 6 XX XX XX XX</div>
+    <div class="buttons">
 
-    <a class="button" href="mailto:contact@galerieconil.com">
-      Nous écrire
-    </a>
+      <!-- WhatsApp -->
+      <a class="btn whatsapp" href="https://wa.me/34633657157" target="_blank">
+        Contacter par WhatsApp
+      </a>
+
+      <!-- Email -->
+      <a class="btn email" href="mailto:fatimazara35@gmail.com">
+        Envoyer un email
+      </a>
+
+    </div>
   </div>
 
 </body>
