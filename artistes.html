@@ -5,107 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artistes — Galerie Conil</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      background: #F5F5F3;
+      background: #0B0B0B;
+      color: #F5F5F3;
       font-family: "Inter", sans-serif;
-      color: #0B0B0B;
     }
 
-    /* MENU SUPERIOR */
     nav {
       display: flex;
       justify-content: center;
       gap: 40px;
       padding: 25px 0;
+      border-bottom: 1px solid #222;
       font-size: 14px;
-      border-bottom: 1px solid #e5e5e5;
     }
 
     nav a {
       text-decoration: none;
-      color: #0B0B0B;
+      color: #F5F5F3;
+      opacity: 0.8;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      opacity: 0.6;
+      opacity: 1;
     }
 
     h1 {
       text-align: center;
       font-family: "Playfair Display", serif;
-      margin: 60px 0 40px;
-      font-size: 36px;
+      margin: 70px 0 50px;
+      font-size: 40px;
     }
 
-    /* GRID ARTISTAS */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 60px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 0 20px 80px;
+      padding: 0 20px 100px;
+    }
+
+    .artist {
       text-align: center;
     }
 
     .artist img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
+      width: 100%;
+      height: 340px;
       object-fit: cover;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .artist h3 {
-      margin: 5px 0;
       font-family: "Playfair Display", serif;
-      font-size: 18px;
+      font-size: 20px;
+      margin-bottom: 8px;
     }
 
-    .artist p {
+    .bio {
       font-size: 14px;
-      color: #6f6f6f;
-      line-height: 1.5;
+      color: #BDBDBD;
+      line-height: 1.6;
+      max-width: 260px;
+      margin: auto;
+    }
+
+    .langs {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    .langs a {
+      color: #F5F5F3;
+      text-decoration: none;
+      margin-left: 10px;
     }
   </style>
 </head>
 
 <body>
 
+  <div class="langs">
+    FR | EN | ES
+  </div>
+
   <nav>
     <a href="index.html">Accueil</a>
     <a href="artistes.html">Artistes</a>
-    <a href="#">Galerie</a>
-    <a href="#">Contact</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>Les artistes</h1>
+  <h1>Artistes</h1>
 
-  <div class="grid">
+  <section class="grid">
 
     <div class="artist">
-      <img src="https://via.placeholder.com/300" alt="">
+      <img src="https://via.placeholder.com/600x800" alt="">
       <h3>Nom de l’artiste</h3>
-      <p>Brève biographie curatoriale de l’artiste, évoquant sa recherche plastique et son univers sensible.</p>
+      <div class="bio">
+        FR — Brève biographie curatoriale de l’artiste.<br>
+        EN — Short curatorial biography of the artist.<br>
+        ES — Breve biografía curatorial del artista.
+      </div>
     </div>
 
     <div class="artist">
-      <img src="https://via.placeholder.com/300" alt="">
+      <img src="https://via.placeholder.com/600x800" alt="">
       <h3>Nom de l’artiste</h3>
-      <p>Pratique contemporaine entre matière, couleur et mémoire, présentée au Maroc et à l’international.</p>
+      <div class="bio">FR — Texte curatorial…<br>EN — Curatorial text…<br>ES — Texto curatorial…</div>
     </div>
 
     <div class="artist">
-      <img src="https://via.placeholder.com/300" alt="">
+      <img src="https://via.placeholder.com/600x800" alt="">
       <h3>Nom de l’artiste</h3>
-      <p>Exploration picturale sensible où le geste dialogue avec les territoires intérieurs.</p>
+      <div class="bio">FR — Texte curatorial…<br>EN — Curatorial text…<br>ES — Texto curatorial…</div>
     </div>
 
-  </div>
+    <div class="artist">
+      <img src="https://via.placeholder.com/600x800" alt="">
+      <h3>Nom de l’artiste</h3>
+      <div class="bio">FR — Texte curatorial…<br>EN — Curatorial text…<br>ES — Texto curatorial…</div>
+    </div>
+
+    <div class="artist">
+      <img src="https://via.placeholder.com/600x800" alt="">
+      <h3>Nom de l’artiste</h3>
+      <div class="bio">FR — Texte curatorial…<br>EN — Curatorial text…<br>ES — Texto curatorial…</div>
+    </div>
+
+    <div class="artist">
+      <img src="https://via.placeholder.com/600x800" alt="">
+      <h3>Nom de l’artiste</h3>
+      <div class="bio">FR — Texte curatorial…<br>EN — Curatorial text…<br>ES — Texto curatorial…</div>
+    </div>
+
+  </section>
 
 </body>
 </html>
