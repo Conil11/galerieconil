@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Œuvre — Galerie Conil</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #F5F5F3;
+      font-family: "Inter", sans-serif;
+      color: #0B0B0B;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0B0B0B;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px 80px;
+    }
+
+    .image {
+      width: 100%;
+      max-height: 70vh;
+      object-fit: cover;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .artist {
+      color: #6f6f6f;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 18px;
+      margin: 20px 0 30px;
+    }
+
+    .text {
+      max-width: 700px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 28px;
+      border: 1px solid #0B0B0B;
+      text-decoration: none;
+      color: #0B0B0B;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #0B0B0B;
+      color: #F5F5F3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <img class="image" src="https://via.placeholder.com/1200x900" alt="Œuvre">
+
+    <h1>Titre de l’œuvre</h1>
+    <div class="artist">Nom de l’artiste, 2024</div>
+
+    <div class="price">1 200 €</div>
+
+    <div class="text">
+      Cette œuvre explore la relation entre matière, silence et mémoire.
+      Par un langage pictural minimaliste, l’artiste propose une expérience
+      contemplative où la surface devient espace intérieur.
+    </div>
+
+    <a class="button" href="mailto:contact@galerieconil.com">
+      Réserver l’œuvre
+    </a>
+
+  </div>
+
+</body>
+</html>
