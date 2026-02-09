@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artistes — Galerie Conil</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #F5F5F3;
+      font-family: "Inter", sans-serif;
+      color: #0B0B0B;
+    }
+
+    /* MENU SUPERIOR */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0B0B0B;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      margin: 60px 0 40px;
+      font-size: 36px;
+    }
+
+    /* GRID ARTISTAS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 60px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px 80px;
+      text-align: center;
+    }
+
+    .artist img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .artist h3 {
+      margin: 5px 0;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    .artist p {
+      font-size: 14px;
+      color: #6f6f6f;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="#">Galerie</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h1>Les artistes</h1>
+
+  <div class="grid">
+
+    <div class="artist">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Nom de l’artiste</h3>
+      <p>Brève biographie curatoriale de l’artiste, évoquant sa recherche plastique et son univers sensible.</p>
+    </div>
+
+    <div class="artist">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Nom de l’artiste</h3>
+      <p>Pratique contemporaine entre matière, couleur et mémoire, présentée au Maroc et à l’international.</p>
+    </div>
+
+    <div class="artist">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Nom de l’artiste</h3>
+      <p>Exploration picturale sensible où le geste dialogue avec les territoires intérieurs.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
